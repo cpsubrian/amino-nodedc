@@ -113,13 +113,48 @@
         </section>
 
         <section>
-          <h2>Demo 1 - How did it work?</h2>
-          <ul>
-            <li>Redis Pub/Sub Gossip</li>
-            <li>Amino Gateway tracks services</li>
-            <li>Amino Services announce themselves</li>
-            <li>Gatway forwards requests to services (round-robin)</li>
-          </ul>
+          <section>
+            <h2>Demo 1 - How did it work?</h2>
+            <ul>
+              <li>Redis Pub/Sub Gossip</li>
+              <li>Amino Gateway tracks services</li>
+              <li>Amino Services announce themselves</li>
+              <li>Gateway forwards requests to services (round-robin)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Your app code is simple</h2>
+            <pre><code>
+var http = require('http')
+  , amino = require('amino').init();
+
+var server = http.createServer(function (req, res) {
+  res.end('Humblr - Where Hipsters Blog\n');
+  console.log('Served request');
+});
+
+amino.createService('humblr', server);
+            </code></pre>
+            </section>
+          <section>
+            <h2>Even if you're using Express...</h2>
+            <pre><code>
+var http = require('http')
+  , express = require('express')
+  , amino = require('amino').init();
+
+var app = express();
+
+app.use(function (req, res) {
+  res.end('Humblr - Where Hipsters Blog\n');
+  console.log('Served request');
+});
+
+var server = http.createServer(app);
+
+amino.createService('humblr', server);
+            </code></pre>
+          </section>
         </section>
 
         <section>
