@@ -234,51 +234,6 @@ amino.queue('do something', {mydata: 'is awesome'});
         </section>
 
         <section>
-          <h2>Spoiler Alert!</h2>
-          <h3>Coming to an npm near you in 2013 ...</h3>
-          <h1 class="fragment">Cantina</h1>
-        </section>
-
-        <section>
-          <h2>Cantina</h2>
-          <ul>
-            <li>Dead Simple Application Framework/Structure</li>
-            <li>Use Amino with one line of code</li>
-            <li>Centered around a shared EventEmitter (peerDependencies)</li>
-            <li>Small 'core', everything is a plugin (http, middleware, static, etc.)</li>
-            <li>Consistent configuration for plugins via node-etc</li>
-          </ul>
-          <br /><br />
-          <p>
-            Stay tuned to node.js mailing list.
-          </p>
-        </section>
-
-        <section>
-          <pre><code>
-var app = require('cantina');
-
-// Load configuration from ./etc/*.yml (or json)
-app.load(function (err) {
-
-  // Load plugins (no fancy plugin system, just plain CommonJS)
-  require('cantina-http');
-  require('cantina-amino');
-  require('cantina-middleware');
-  require('cantina-sessions');
-  require('cantina-log');
-  // ... etc.
-
-  // Start the app
-  // Plugins can listen for 'init' and 'ready' events.
-  app.init(function (err) {
-    // The app started.
-  });
-});
-          </code></pre>
-        </section>
-
-        <section>
           <h1>THE END</h1>
 
           <p>Slides and Demos at: http://github.com/cpsubrian/amino-nodedc</p>
