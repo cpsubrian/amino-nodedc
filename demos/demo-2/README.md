@@ -13,7 +13,7 @@ $ npm install amino-drone -g
 
 Install amino-deploy globally
 ```
-$ npm install amino-drone -g
+$ npm install amino-deploy -g
 ```
 
 Start up two or three drones.
