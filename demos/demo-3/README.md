@@ -24,6 +24,6 @@ In the other, start the prompt.
 
 ```
 $ node chat-prompt.js
-``
+```
 
-Now, chat in the prompt and see everyones chats in the client.
+Now, chat in the prompt and see everyone's chats in the client.
